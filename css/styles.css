@@ -87,3 +87,7 @@ img {
 .table-hover {
   background: transparent;
 }
+
+table {
+  text-align: center;
+}

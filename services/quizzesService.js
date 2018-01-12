@@ -1,9 +1,9 @@
 app.service("quizzesService", function($state, $http) {
 
   // Get all math
-  this.getMaths = function() {
-    return $http.get("https://opentdb.com/api.php?amount=20")
-  }
+  // this.getMaths = function() {
+  //   return $http.get("https://opentdb.com/api.php?amount=20")
+  // }
 
     // // Create maths array
     // var _maths = [];

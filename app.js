@@ -7,12 +7,13 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     .state("quizzes", {
       url: "/",
       templateUrl: "./views/quizzes.html",
+      controller: "quizzesController"
     })
 
     .state("math", {
       url: "/math",
-      templateUrl: "./views/math.html",
-      controller: "mathController"
+      templateUrl: "./views/quiz.html",
+      controller: "quizzesController"
     })
 
 });

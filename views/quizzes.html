@@ -1,0 +1,19 @@
+<div class="container">
+  <div>
+    <a ui-sref="quiz" class="nav pull-right">Go to Quiz</a>
+  </div>
+  <div class="col-md-7 col-md-offset-3">
+    <h1 class="title"> <img src="https://www.zerowater.com/images/search.png"> Search QuizMe</h1>
+    <p class="description">Looking for extra study materials or lessons to prep you for your upcoming quizzes, exams, or just to gain a deeper understanding of a particular subject that you're weak in? You're in it for a ride, we may have just what you are looking for!</p>
+    <p class="description">This app allows you to search for flashcards quiz in all major subjects.</p>
+    <input type="text" class=" form-control" ng-model="search" placeholder="Search by subjects or category">
+    <table class="table table">
+      <tr class="tables">
+        <th class="text-center">CATEGORY</th>
+      </tr>
+      <tr class="tables" ng-repeat="quiz in quizzes | filter: search" ui-sref="quiz({id: quiz.id})">
+        <td>{{ quiz.category }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
