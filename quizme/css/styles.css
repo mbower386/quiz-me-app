@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.5px;
+}
+
+body {
+  background-image: url("education.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav {
+  color: rgba(253, 252, 252, 0.9);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+  border: 1px solid rgba(253, 252, 252, 0.9);
+  background: rgb(148, 98, 98);
+  padding: 3px 10px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+}
+
+.nav:hover {
+  text-decoration: none;
+  color: rgb(253, 252, 252);
+}
+
+.nav:active {
+  text-decoration: none;
+  color: rgba(253, 252, 252, 0.9);
+}
+
+.nav:visited {
+  text-decoration: none;
+  color: rgba(253, 252, 252, 0.9);
+}
+
+.title {
+  text-align: center;
+  color: rgba(253, 252, 252, 0.9);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  margin: 50px 0 40px 0;
+  border-radius: 5px;
+}
+
+.description {
+  text-align: center;
+  color: rgba(253, 252, 252, 0.9);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 22px;
+}
+
+input {
+  text-align: center;
+  margin: 25px 0; 
+}
+
+img {
+  width: 70px;
+  height: 70px;
+}
+
+.header {
+  color: rgba(253, 252, 252, 0.9);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  margin: 80px 0 30px 0;
+}
+
+.tables {
+  color: white;
+}
+
+.table-hover {
+  background: transparent;
+}
