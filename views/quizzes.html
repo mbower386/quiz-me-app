@@ -8,13 +8,17 @@
     <div class="col-md-10 col-md-offset-1">
       <input type="text" class="form-control" ng-model="search" placeholder="Search by subjects or category">
     </div>
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-12">
       <table class="table table" ng-show="showQuizzes">
         <tr class="tables">
           <th class="table-header">CATEGORY</th>
+          <th class="table-header">QUESTION</th>
+          <th class="table-header">ANSWER</th>
         </tr>
-        <tr class="tables" ng-repeat="quiz in quizzes | filter: search" ui-sref="quiz({id: quiz.question})">
+        <tr class="tables" ng-repeat="quiz in quizzes | filter: search | orderBy: 'category'" ui-sref="quiz({id: quiz.question})">
           <td>{{ quiz.category }}</td>
+          <td>{{ quiz.question }}</td>
+          <td>{{ quiz.correct_answer}}</td>
         </tr>
       </table>
     </div>
