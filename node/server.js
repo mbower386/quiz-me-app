@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/quizzes', users);
+app.use('/quizzes', quizzes);
 
 module.exports = app;
