@@ -1,11 +1,14 @@
-app.controller("quizzesController", function($scope, $state, $stateParams, $filter, $http) {
+app.controller("quizzesController", function($scope, $state, $stateParams, $filter, $http, quizzesService) {
   
+  $scope.showQuizzes = false;
+
   // Get all quizzes
   $scope.getQuiz = function() {
-    $http.get("https://opentdb.com/api.php?amount=50")
+    quizzesService.getQuizzes()
       .then(function (response) {
         console.log("Quizzes: ", response.data.results);
         $scope.quizzes = response.data.results;
+        $scope.showQuizzes = true;
       }, function(error) {
         console.log(error)
       })
@@ -13,10 +16,17 @@ app.controller("quizzesController", function($scope, $state, $stateParams, $filt
 
   $scope.getQuiz();
 
-  // // Get all quizzes
-  // $scope.maths = quizzesService.getMaths()
-  // console.log("From my controller: ", $scope.maths);
-
-  // // Get quiz by ID
+  // Get one by Id
+  if ($stateParams.question == "" || $stateParams.question == undefined || $stateParams.question == null) {
+    quizzesService.getQuizById($stateParams.question, function (quiz) {
+      $scope.quiz = quiz;
+    });
+  }
+  else {
+    quizzesService.getQuizById($stateParams.question, function (quiz) {
+      $scope.quiz = quiz;
+    });
+    $state.go("quiz");
+  };
 
 });

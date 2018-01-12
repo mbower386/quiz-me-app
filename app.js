@@ -10,8 +10,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       controller: "quizzesController"
     })
 
-    .state("math", {
-      url: "/math",
+    .state("quiz", {
+      url: "/quizzes/:id",
       templateUrl: "./views/quiz.html",
       controller: "quizzesController"
     })
